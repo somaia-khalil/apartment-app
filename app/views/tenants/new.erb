@@ -1,6 +1,16 @@
-<h2>Create New Landmark</h2>
+<h2>Create New Tenant</h2>
+<form action= '/tenants' method="post">
+<input type= "text" name="name">
+<input type= "submit">
+<label>Apartments:</label>
+<select name="apartment_id">
+<% @apartments.each do |apartment| %>
+    <option value=<%=apartment.id%> > <%=apartment.address%> </option>
+<% end %>
+</select>
 
+</form>
 <!-- add content here -->
 
-<a class="button" href="/landmarks">Landmarks</a>
+<a class="button" href="/tenants"> Tenants</a>
 <a class="button" href="/">Home</a>

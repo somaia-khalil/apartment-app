@@ -1,6 +1,14 @@
-<h2>Edit Historical Landmark</h2>
+<h2>Edit tenant</h2>
 
 <!-- add content here -->
+<form action="/tenants/<%=@tenant.id%>" method="post">
+
+<input type="hidden" name="_method" value="patch"/>
+
+<input type="text" name="name" value="<%=@tenant.name%>"/>
+
+<input type= "submit"/>
+</form>
 
 <a class="button" href="/landmarks">Landmarks</a>
 <a class="button" href="/">Home</a>
